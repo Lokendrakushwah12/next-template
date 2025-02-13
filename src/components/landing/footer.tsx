@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ThemeToggle } from "../layouts/theme-toggle";
 import { Shell } from "../shell";
 import { Button } from "../ui/button";
+import { Logo } from "../logo";
 const Footer = () => {
   const FOOTER_LINKS = [
     {
@@ -36,14 +37,14 @@ const Footer = () => {
           {/* logo */}
           <div className="flex flex-col items-start">
             <div className="flex items-center gap-2">
-              <Pen className="h-4 w-auto" />
-              <span className="text-base font-medium">myth-arc</span>
+              <Logo />
+              <span className="text-base font-medium">Stalwarts</span>
             </div>
             <p className="max-w mt-4 text-base">
-              Shape Your Story, One Arc at a Time
+              Empowering Brands with High-Performance Digital Solutions.
             </p>
             <Link className="mt-10" href="/auth/join">
-              <Button size="sm">Join now</Button>
+              <Button size="sm">Let&apos;s Talk</Button>
             </Link>
           </div>
           {/* links */}
@@ -70,15 +71,16 @@ const Footer = () => {
         <hr className="w-full" />
         <div className="relative flex items-center justify-between">
           <p className="text-sm font-[400] text-muted-foreground">
-            Built by&nbsp;
+            © {new Date().getFullYear()}&nbsp;
             <Link
               target="_blank"
               rel="noreferrer"
               href="https://x.com/lokendratwt"
               className="font-[500] text-muted-foreground hover:text-secondary-foreground"
             >
-              Lokendra.
+              Stalwarts.
             </Link>
+            &nbsp; All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <Link
