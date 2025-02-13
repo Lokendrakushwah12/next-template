@@ -14,7 +14,6 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "../ui/navigation-menu";
-import { Logo } from "../logo";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -67,7 +66,7 @@ const Navbar = () => {
     <>
       <header
         className={cn(
-          "sticky inset-x-0 top-0 z-[100] transform bg-background/80 backdrop-blur-lg",
+          "sticky inset-x-0 top-0 z-[100] transform border-b bg-background/90 backdrop-blur-lg",
           isOpen ? "h-[calc(100%-24px)]" : "h-16",
         )}
       >
@@ -78,8 +77,8 @@ const Navbar = () => {
                 href="/"
                 className="flex items-center gap-2 text-lg font-semibold text-foreground"
               >
-                <Logo />
-                <span className="text-base font-medium">Stalwarts</span>
+                <Pen className="h-4 w-auto" />
+                <span className="text-base font-medium">next-template</span>
               </Link>
               <div className="ml-4 hidden items-center lg:flex">
                 <NavigationMenu>
@@ -131,14 +130,14 @@ const Navbar = () => {
             </div>
           </div>
           <div className="flex items-center justify-center space-x-4 py-4">
-            {/* <Link href="/auth/login">
+            <Link href="/auth/login">
               <Button variant="outline" size="sm" className="text-foreground">
                 <span className="text-sm">Log in</span>
               </Button>
-            </Link> */}
+            </Link>
             <Link href="/auth/join">
               <Button size="sm">
-                <span className="text-sm">Let&apos;s Talk</span>
+                <span className="text-sm">Join now</span>
               </Button>
             </Link>
             <Button
