@@ -9,6 +9,9 @@ const About = () => {
         <div className="text-muted-foreground justify-between gap-8 rounded-2xl">
           {about}
         </div>
+        <div className="font-mono text-muted-foreground justify-between gap-8 rounded-2xl">
+          {about}
+        </div>
       </div>
     </div>
   );
